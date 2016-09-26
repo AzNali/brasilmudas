@@ -66,6 +66,7 @@ public class Menu extends javax.swing.JFrame {
         jBClientes = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
         jPanelSelec = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         Clientes = new javax.swing.JPanel();
@@ -193,6 +194,8 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jLabel18.setText("asd");
+
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
@@ -208,7 +211,10 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel3)))
                     .addGroup(jPanelMenuLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jLabelEmpresa)))
+                        .addComponent(jLabelEmpresa))
+                    .addGroup(jPanelMenuLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel18)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanelMenuLayout.setVerticalGroup(
@@ -224,6 +230,8 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(jLabel18)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1218,6 +1226,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
