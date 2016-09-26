@@ -12,12 +12,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-//oii bruna teste kk
+mudança nali
 /**
  *
  * @author az
  */
-//Mudanca BRUNA HEEEEEEEEEEEEEEEEeeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEadsd
+
 public class ClienteData extends Database {
 
     Statement stmt = Acesso();
