@@ -1,0 +1,14 @@
+1create table `brasilmudas`.Clientes
+(
+	ID INT not null primary key auto_increment,
+	Nome VARCHAR(30) not null,
+	Telefone INT(13) default null,
+	Celular INT(13) default null,
+	Empresa VARCHAR(20) default null,
+	Cidade VARCHAR(15) default null,
+	Estado VARCHAR(15) default null,
+	CEP INT(8) default null,
+	Rua VARCHAR(20) default null,
+	Complemento VARCHAR(15) default null,
+	Email VARCHAR(30) default null
+);
