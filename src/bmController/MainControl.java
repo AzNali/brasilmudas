@@ -6,27 +6,20 @@
 package bmController;
 
 import bmView.Menu;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
  * @author az
  */
-public class MainControl {
+public class MainControl extends Controller implements ActionListener {
 
-    public String getTeste() {
-        return teste;
-    }
+    //private Menu Menu;
+    public static void main(String[] args) {
+        Menu Menu = new Menu();
 
-    public void setTeste(String teste) {
-        this.teste = teste;
-    }
-
-
-    private String teste;
-    private static Menu Menu;
-    
-    public static void main(String[] args){
-        Menu = new Menu(); 
-        
+        Controller control = new Controller();
+        Menu.addControler(control);
     }
 }

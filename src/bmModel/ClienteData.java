@@ -17,26 +17,13 @@ import javax.swing.JOptionPane;
  *
  * @author az
  */
-
-public class ClienteData extends Database {
+public class ClienteData extends Pessoa {
 
     Statement stmt = Acesso();
-    
-    public ArrayList<Integer> ID = new ArrayList();
-    public ArrayList<String> Nome = new ArrayList();
-    public ArrayList<String> Telefone = new ArrayList();
-    public ArrayList<Integer> Celular = new ArrayList();
-    public ArrayList<String> Empresa = new ArrayList();
-    public ArrayList<String> Cidade = new ArrayList();
-    public ArrayList<String> Estado = new ArrayList();
-    public ArrayList<Integer> CEP = new ArrayList();
-    public ArrayList<String> Rua = new ArrayList();
-    public ArrayList<String> Complemento = new ArrayList();
-    public ArrayList<String> Email = new ArrayList();    
-    
-    public boolean SalvarCliente(ClienteData ClienteData) {
+
+    public boolean SalvarPessoa(Database Data) {
         try {
-            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('"+ClienteData.Nome.get(0)+"','"+ClienteData.Telefone.get(0)+"','"+ClienteData.Celular.get(0)+"','"+ClienteData.Empresa.get(0)+"','"+ClienteData.Cidade.get(0)+"','"+ClienteData.Estado.get(0)+"','"+ClienteData.CEP.get(0)+"','"+ClienteData.Rua.get(0)+"','"+ClienteData.Complemento.get(0)+"','"+ClienteData.Email.get(0)+"');";
+            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Data.getNome().get(0) + "','" + Data.getTelefone().get(0) + "','" + Data.getCelular().get(0) + "','" + Data.getEmpresa().get(0) + "','" + Data.getCidade().get(0) + "','" + Data.getEstado().get(0) + "','" + Data.getCEP().get(0) + "','" + Data.getRua().get(0) + "','" + Data.getComplemento().get(0) + "','" + Data.getEmail().get(0) + "');";
             System.out.println(Insert);
             stmt.executeUpdate(Insert);
 
@@ -49,54 +36,53 @@ public class ClienteData extends Database {
         return false;
     }
 
-    public boolean BuscarData(ClienteData ClienteData, NumClientes NumClientes) {
-        if(!ClienteData.Nome.isEmpty()){
-            ClienteData.ID.clear();
-            ClienteData.Nome.clear();
-            ClienteData.Telefone.clear();
-            ClienteData.Celular.clear();
-            ClienteData.Empresa.clear();
-            ClienteData.Cidade.clear();
-            ClienteData.Estado.clear();
-            ClienteData.CEP.clear();
-            ClienteData.Rua.clear();
-            ClienteData.Complemento.clear();    
-            ClienteData.Email.clear();
+    public boolean BuscarData(Database Data) {
+        if (!Data.getNome().isEmpty()) {
+            Data.getID().clear();
+            Data.getNome().clear();
+            Data.getTelefone().clear();
+            Data.getCelular().clear();
+            Data.getEmpresa().clear();
+            Data.getCidade().clear();
+            Data.getEstado().clear();
+            Data.getCEP().clear();
+            Data.getRua().clear();
+            Data.getComplemento().clear();
+            Data.getEmail().clear();
         }
-        
+
         try {
             String Pesquisar = "SELECT * FROM Clientes;";
             ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM Clientes;");
             rs.next();
-            NumClientes.setNum(rs.getInt(1));
+            Data.setNum((rs.getInt(1)));
 
             rs = stmt.executeQuery(Pesquisar);
-            
-            if (rs.next()) {
-                ClienteData.Nome.add(rs.getString("Nome"));
-                ClienteData.Telefone.add(rs.getString("Telefone"));
-                ClienteData.ID.add(rs.getInt("ID"));
-                ClienteData.Celular.add(rs.getInt("Telefone"));
-                ClienteData.Empresa.add(rs.getString("Nome"));
-                ClienteData.Cidade.add(rs.getString("ID"));
-                ClienteData.Estado.add(rs.getString("Nome"));
-                ClienteData.CEP.add(rs.getInt("Telefone"));
-                ClienteData.Rua.add(rs.getString("ID"));
-                ClienteData.Complemento.add(rs.getString("Nome"));
-                ClienteData.Email.add(rs.getString("Nome"));
 
+            if (rs.next()) {
+                Data.getNome().add(rs.getString("Nome"));
+                Data.getTelefone().add(rs.getString("Telefone"));
+                Data.getID().add(rs.getInt("ID"));
+                Data.getCelular().add(rs.getInt("Telefone"));
+                Data.getEmpresa().add(rs.getString("Nome"));
+                Data.getCidade().add(rs.getString("ID"));
+                Data.getEstado().add(rs.getString("Nome"));
+                Data.getCEP().add(rs.getInt("Telefone"));
+                Data.getRua().add(rs.getString("ID"));
+                Data.getComplemento().add(rs.getString("Nome"));
+                Data.getEmail().add(rs.getString("Nome"));
                 while (rs.next()) {
-                    ClienteData.Nome.add(rs.getString("Nome"));
-                    ClienteData.Telefone.add(rs.getString("Telefone"));
-                    ClienteData.ID.add(rs.getInt("ID"));
-                    ClienteData.Celular.add(rs.getInt("Telefone"));
-                    ClienteData.Empresa.add(rs.getString("Nome"));       
-                    ClienteData.Cidade.add(rs.getString("ID"));
-                    ClienteData.Estado.add(rs.getString("Nome"));
-                    ClienteData.CEP.add(rs.getInt("Telefone"));
-                    ClienteData.Rua.add(rs.getString("ID"));
-                    ClienteData.Complemento.add(rs.getString("Nome"));
-                    ClienteData.Email.add(rs.getString("Nome"));
+                    Data.getNome().add(rs.getString("Nome"));
+                    Data.getTelefone().add(rs.getString("Telefone"));
+                    Data.getID().add(rs.getInt("ID"));
+                    Data.getCelular().add(rs.getInt("Telefone"));
+                    Data.getEmpresa().add(rs.getString("Nome"));
+                    Data.getCidade().add(rs.getString("ID"));
+                    Data.getEstado().add(rs.getString("Nome"));
+                    Data.getCEP().add(rs.getInt("Telefone"));
+                    Data.getRua().add(rs.getString("ID"));
+                    Data.getComplemento().add(rs.getString("Nome"));
+                    Data.getEmail().add(rs.getString("Nome"));
 
                 }
                 return true;
@@ -108,10 +94,10 @@ public class ClienteData extends Database {
         }
     }
 
-    public int ProcurarPosicao(ClienteData ClienteData, int i) {
+    public int ProcurarPosicao(Database Data, int i) {
         int Pos;
         try {
-            String GetPosicao = "SELECT COUNT(*) FROM Clientes WHERE ID <= '" + ClienteData.ID.get(i) + "'";
+            String GetPosicao = "SELECT COUNT(*) FROM Clientes WHERE ID <= '" + Data.getID().get(i) + "'";
             ResultSet rs = stmt.executeQuery(GetPosicao);
             Pos = rs.getInt(1);
             return Pos;
@@ -121,9 +107,9 @@ public class ClienteData extends Database {
         }
     }
 
-    public boolean Excluir(ClienteData ClienteData, int i) {
+    public boolean Excluir(Database Data, int i) {
         try {
-            String Excluir = "DELETE FROM Clientes WHERE ID='" + ClienteData.ID.get(i) + "';";
+            String Excluir = "DELETE FROM Clientes WHERE ID='" + Data.getID().get(i) + "';";
             stmt.execute(Excluir);
             return true;
 
@@ -133,7 +119,7 @@ public class ClienteData extends Database {
         }
     }
 
-    public static class NumClientes {
+    /* public static class NumClientes {
 
         public int getNum() {
             return Num;
@@ -144,6 +130,5 @@ public class ClienteData extends Database {
         }
 
         private int Num;
-    }
+    }*/
 }
-

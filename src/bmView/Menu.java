@@ -5,10 +5,13 @@
  */
 package bmView;
 
+import bmController.Controller;
+import bmController.MainControl;
 import bmModel.ClienteData;
 import java.awt.CardLayout;
 import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -16,9 +19,8 @@ import javax.swing.JOptionPane;
  */
 public class Menu extends javax.swing.JFrame {
 
-    public ClienteData ClienteData = new ClienteData();
+    public ClienteData ClienteData;
 
-    ClienteData.NumClientes NumClientes = new ClienteData.NumClientes();
     public int i;
 
     /**
@@ -65,8 +67,7 @@ public class Menu extends javax.swing.JFrame {
         jLabelEmpresa = new javax.swing.JLabel();
         jBClientes = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
+        jBMenu = new javax.swing.JButton();
         jPanelSelec = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         Clientes = new javax.swing.JPanel();
@@ -174,6 +175,8 @@ public class Menu extends javax.swing.JFrame {
         jPanelMenu.setBackground(new java.awt.Color(109, 183, 112));
         jPanelMenu.setForeground(new java.awt.Color(254, 254, 254));
 
+        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bmView/Logo2.png"))); // NOI18N
+
         jLabelEmpresa.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
         jLabelEmpresa.setForeground(new java.awt.Color(254, 254, 254));
         jLabelEmpresa.setText("Brasil Mudas");
@@ -186,22 +189,20 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
-        jButton1.setText("Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBMenu.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        jBMenu.setText("Menu");
+        jBMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBMenuActionPerformed(evt);
             }
         });
-
-        jLabel18.setText("asd");
 
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jBClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jBMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelMenuLayout.createSequentialGroup()
@@ -210,12 +211,9 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabelLogo)
                             .addComponent(jLabel3)))
                     .addGroup(jPanelMenuLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabelEmpresa))
-                    .addGroup(jPanelMenuLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel18)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabelEmpresa)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,14 +222,12 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabelLogo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelEmpresa)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(jBMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jLabel18)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -684,6 +680,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jBCancelar.setText("Cancelar");
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Novo Cliente");
 
@@ -832,6 +833,9 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClientesActionPerformed
+        if(ClienteData == null)
+            ClienteData = new ClienteData();
+        
         jBVoltar.setEnabled(false);
         CallMenu();
     }//GEN-LAST:event_jBClientesActionPerformed
@@ -841,27 +845,27 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jCBAcaoActionPerformed
 
     private void jBNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoClienteActionPerformed
-            ClienteData.Nome.clear();
-            ClienteData.Telefone.clear();
-            ClienteData.Celular.clear();
-            ClienteData.Empresa.clear();
-            ClienteData.Cidade.clear();
-            ClienteData.Estado.clear();
-            ClienteData.CEP.clear();
-            ClienteData.Rua.clear();
-            ClienteData.Complemento.clear();    
-            ClienteData.Email.clear();
+            ClienteData.getNome().clear();
+            ClienteData.getTelefone().clear();
+            ClienteData.getCelular().clear();
+            ClienteData.getEmpresa().clear();
+            ClienteData.getCidade().clear();
+            ClienteData.getEstado().clear();
+            ClienteData.getCEP().clear();
+            ClienteData.getRua().clear();
+            ClienteData.getComplemento().clear();    
+            ClienteData.getEmail().clear();
 
         CardLayout Card = (CardLayout) jPanelSelec.getLayout();
         Card.show(jPanelSelec, "NovoCliente");
 
     }//GEN-LAST:event_jBNovoClienteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuActionPerformed
 
         // jButton1.setBackground(Color.green); mudando a cor do botão
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jBMenuActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         int Index = jComboBox1.getSelectedIndex();
@@ -893,7 +897,7 @@ public class Menu extends javax.swing.JFrame {
         jBVoltar.setEnabled(true);
         i += 10;
         jLPag.setText("Página:"+(i/10+1)+"");
-        PreencherCampos(ClienteData, i, NumClientes.getNum());
+        PreencherCampos(ClienteData, i, ClienteData.getNum());
     }//GEN-LAST:event_jBAvancarActionPerformed
 
     private void jBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVoltarActionPerformed
@@ -903,7 +907,7 @@ public class Menu extends javax.swing.JFrame {
         if (i == 0) {
             jBVoltar.setEnabled(false);
         }
-        PreencherCampos(ClienteData, i, NumClientes.getNum());
+        PreencherCampos(ClienteData, i, ClienteData.getNum());
 
     }//GEN-LAST:event_jBVoltarActionPerformed
 
@@ -984,17 +988,16 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void jBSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalvarActionPerformed
-        ClienteData.Nome.add(jTNome.getText());
-        ClienteData.Telefone.add(jTTelefone.getText());
-        ClienteData.Celular.add(parseInt(jTCelular.getText()));
-        ClienteData.Empresa.add(jTEmpresa.getText());
-        ClienteData.Cidade.add(jTCidade.getText());
-        ClienteData.Estado.add(jTEstado.getText());
-        ClienteData.CEP.add(parseInt(jTCEP.getText()));
-        ClienteData.Rua.add(jTRua.getText());
-        ClienteData.Complemento.add(jTComplemento.getText());
-        ClienteData.Email.add(jTEmail.getText());
-        
+        ClienteData.getNome().add(jTNome.getText());
+        ClienteData.getTelefone().add(jTTelefone.getText());
+        ClienteData.getCelular().add(parseInt(jTCelular.getText()));
+        ClienteData.getEmpresa().add(jTEmpresa.getText());
+        ClienteData.getCidade().add(jTCidade.getText());
+        ClienteData.getEstado().add(jTEstado.getText());
+        ClienteData.getCEP().add(parseInt(jTCEP.getText()));
+        ClienteData.getRua().add(jTRua.getText());
+        ClienteData.getComplemento().add(jTComplemento.getText());
+        ClienteData.getEmail().add(jTEmail.getText());
         
         jTNome.setText("");
         jTTelefone.setText("");
@@ -1007,7 +1010,7 @@ public class Menu extends javax.swing.JFrame {
         jTComplemento.setText("");
         jTEmail.setText("");
 
-        if (ClienteData.SalvarCliente(ClienteData)) {
+        if (ClienteData.SalvarPessoa(ClienteData)) {
             JOptionPane.showMessageDialog(this, "Contato salvo com sucesso.");
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao salvar contato.");
@@ -1178,6 +1181,10 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTNome1ActionPerformed
 
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1191,10 +1198,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jBAvancar;
     private javax.swing.JButton jBCancelar;
     private javax.swing.JButton jBClientes;
+    private javax.swing.JButton jBMenu;
     private javax.swing.JButton jBNovoCliente;
     private javax.swing.JButton jBSalvar;
     private javax.swing.JButton jBVoltar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jCBAcao;
     private javax.swing.JComboBox<String> jCBOrdenar;
     private javax.swing.JCheckBox jCheckBox1;
@@ -1226,7 +1233,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1296,55 +1302,55 @@ public class Menu extends javax.swing.JFrame {
     private void PreencherCampos(ClienteData ClienteData, int i, int NumContatos) {
         LimparCampos();
         if (i < NumContatos) {
-            jTNome1.setText(ClienteData.Nome.get(i));
-            jTTel1.setText(ClienteData.Telefone.get(i));
-            jTCel1.setText(ClienteData.Celular.get(i).toString());
-            jTEmpresa1.setText(ClienteData.Empresa.get(i));
+            jTNome1.setText(ClienteData.getNome().get(i));
+            jTTel1.setText(ClienteData.getTelefone().get(i));
+            jTCel1.setText(ClienteData.getCelular().get(i).toString());
+            jTEmpresa1.setText(ClienteData.getEmpresa().get(i));
             if (i + 1 < NumContatos) {
-                jTNome2.setText(ClienteData.Nome.get(i + 1));
-                jTTel2.setText(ClienteData.Telefone.get(i + 1));
-                jTCel2.setText(ClienteData.Celular.get(i+1).toString());
-                jTEmpresa2.setText(ClienteData.Empresa.get(i+1));
+                jTNome2.setText(ClienteData.getNome().get(i + 1));
+                jTTel2.setText(ClienteData.getTelefone().get(i + 1));
+                jTCel2.setText(ClienteData.getCelular().get(i+1).toString());
+                jTEmpresa2.setText(ClienteData.getEmpresa().get(i+1));
                 if (i + 2 < NumContatos) {
-                    jTNome3.setText(ClienteData.Nome.get(i + 2));
-                    jTTel3.setText(ClienteData.Telefone.get(i + 2));
-                    jTCel3.setText(ClienteData.Celular.get(i+2).toString());
-                    jTEmpresa3.setText(ClienteData.Empresa.get(i+2));
+                    jTNome3.setText(ClienteData.getNome().get(i + 2));
+                    jTTel3.setText(ClienteData.getTelefone().get(i + 2));
+                    jTCel3.setText(ClienteData.getCelular().get(i+2).toString());
+                    jTEmpresa3.setText(ClienteData.getEmpresa().get(i+2));
                     if (i + 3 < NumContatos) {
-                        jTNome4.setText(ClienteData.Nome.get(i + 3));
-                        jTTel4.setText(ClienteData.Telefone.get(i + 3));
-                        jTCel4.setText(ClienteData.Celular.get(i+3).toString());
-                        jTEmpresa4.setText(ClienteData.Empresa.get(i+3));
+                        jTNome4.setText(ClienteData.getNome().get(i + 3));
+                        jTTel4.setText(ClienteData.getTelefone().get(i + 3));
+                        jTCel4.setText(ClienteData.getCelular().get(i+3).toString());
+                        jTEmpresa4.setText(ClienteData.getEmpresa().get(i+3));
                         if (i + 4 < NumContatos) {
-                            jTNome5.setText(ClienteData.Nome.get(i + 4));
-                            jTTel5.setText(ClienteData.Telefone.get(i + 4));
-                            jTCel5.setText(ClienteData.Celular.get(i+4).toString());
-                            jTEmpresa5.setText(ClienteData.Empresa.get(i+4));
+                            jTNome5.setText(ClienteData.getNome().get(i + 4));
+                            jTTel5.setText(ClienteData.getTelefone().get(i + 4));
+                            jTCel5.setText(ClienteData.getCelular().get(i+4).toString());
+                            jTEmpresa5.setText(ClienteData.getEmpresa().get(i+4));
                             if (i + 5< NumContatos) {
-                                jTNome6.setText(ClienteData.Nome.get(i+5));
-                                jTTel6.setText(ClienteData.Telefone.get(i+ 5));
-                                jTCel6.setText(ClienteData.Celular.get(i+ 5).toString());
-                                jTEmpresa6.setText(ClienteData.Empresa.get(i+ 5));
+                                jTNome6.setText(ClienteData.getNome().get(i+5));
+                                jTTel6.setText(ClienteData.getTelefone().get(i+ 5));
+                                jTCel6.setText(ClienteData.getCelular().get(i+ 5).toString());
+                                jTEmpresa6.setText(ClienteData.getEmpresa().get(i+ 5));
                                 if (i + 6 < NumContatos) {
-                                    jTNome7.setText(ClienteData.Nome.get(i + 6));
-                                    jTTel7.setText(ClienteData.Telefone.get(i + 6));
-                                    jTCel7.setText(ClienteData.Celular.get(i+6).toString());
-                                    jTEmpresa7.setText(ClienteData.Empresa.get(i+6));
+                                    jTNome7.setText(ClienteData.getNome().get(i + 6));
+                                    jTTel7.setText(ClienteData.getTelefone().get(i + 6));
+                                    jTCel7.setText(ClienteData.getCelular().get(i+6).toString());
+                                    jTEmpresa7.setText(ClienteData.getEmpresa().get(i+6));
                                     if (i + 7 < NumContatos) {
-                                        jTNome8.setText(ClienteData.Nome.get(i + 7));
-                                        jTTel8.setText(ClienteData.Telefone.get(i + 7));
-                                        jTCel8.setText(ClienteData.Celular.get(i+7).toString());
-                                        jTEmpresa8.setText(ClienteData.Empresa.get(i+7));
+                                        jTNome8.setText(ClienteData.getNome().get(i + 7));
+                                        jTTel8.setText(ClienteData.getTelefone().get(i + 7));
+                                        jTCel8.setText(ClienteData.getCelular().get(i+7).toString());
+                                        jTEmpresa8.setText(ClienteData.getEmpresa().get(i+7));
                                         if (i + 8 < NumContatos) {
-                                            jTNome9.setText(ClienteData.Nome.get(i + 8));
-                                            jTTel9.setText(ClienteData.Telefone.get(i + 8));
-                                            jTCel9.setText(ClienteData.Celular.get(i+8).toString());
-                                            jTEmpresa9.setText(ClienteData.Empresa.get(i+8));
+                                            jTNome9.setText(ClienteData.getNome().get(i + 8));
+                                            jTTel9.setText(ClienteData.getTelefone().get(i + 8));
+                                            jTCel9.setText(ClienteData.getCelular().get(i+8).toString());
+                                            jTEmpresa9.setText(ClienteData.getEmpresa().get(i+8));
                                             if (i + 9 < NumContatos) {
-                                                jTNome10.setText(ClienteData.Nome.get(i + 9));
-                                                jTTel10.setText(ClienteData.Telefone.get(i + 9));
-                                                jTCel10.setText(ClienteData.Celular.get(i+9).toString());
-                                                jTEmpresa10.setText(ClienteData.Empresa.get(i + 9));
+                                                jTNome10.setText(ClienteData.getNome().get(i + 9));
+                                                jTTel10.setText(ClienteData.getTelefone().get(i + 9));
+                                                jTCel10.setText(ClienteData.getCelular().get(i+9).toString());
+                                                jTEmpresa10.setText(ClienteData.getEmpresa().get(i + 9));
                                             }
                                         }
                                     }
@@ -1378,10 +1384,15 @@ public class Menu extends javax.swing.JFrame {
         
         jLPag.setText("Página:"+(i/10+1)+"");
         
-        ClienteData.BuscarData(ClienteData, NumClientes);
-        PreencherCampos(ClienteData, i, NumClientes.getNum());
+        ClienteData.BuscarData(ClienteData);
+        PreencherCampos(ClienteData, i, ClienteData.getNum());
 
         
 
+    }
+    
+    public void addControler(Controller controller) {
+        jBAvancar.setActionCommand("Nome do comando");
+        jBAvancar.addActionListener(controller);
     }
 }
