@@ -5,6 +5,7 @@
  */
 package bmController;
 
+import bmView.Menu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,19 +13,73 @@ import java.awt.event.ActionListener;
  *
  * @author az
  */
+//Classe responsável pelo controle do direcionamento dos eventos ocorridos no View para as respectivas classes de processamento desses eventos.
 public class Controller implements ActionListener {
 
-    String s = "asd";
+    ClientesController ClientesController;
+    Menu Menu;
+
+    Controller() {
+        Menu Menu = new Menu();
+        Controller Control = new Controller();
+
+        Menu.addController(Control);
+    }
+
+    public static void main(String[] args) {
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "Nome do comando") {
-            try {
-                
-                Integer.parseInt(s);
-            } catch(NumberFormatException eq)  {
-                System.out.println(eq);
+
+        if ("Clientes".equals(e.getActionCommand())) {
+            if (ClientesController == null) {
+                ClientesController = new ClientesController(Menu);
             }
+
+            ClientesController.ClientesCriar();
+            
+            Menu.ViewMenu();
+            ClientesController.ClientesDisplay();
+
+            
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    String s = "asd";
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        if (e.getActionCommand() == "Avançar") {
+//            try {
+//                
+//                Integer.parseInt(s);
+//            } catch(NumberFormatException eq)  {
+//                System.out.println(eq);
+//            }
+//        }
+//    }
