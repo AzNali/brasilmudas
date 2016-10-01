@@ -45,7 +45,6 @@ public class Menu extends javax.swing.JFrame {
         }
         //</editor-fold>
         initComponents();
-        //setVisible(true); Coloquei setVisible para o controller.
         i = 0;
         
     }
@@ -66,6 +65,9 @@ public class Menu extends javax.swing.JFrame {
         jBClientes = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jBMenu = new javax.swing.JButton();
+        jBFunc = new javax.swing.JButton();
+        jBEstoque = new javax.swing.JButton();
+        jbTrans = new javax.swing.JButton();
         jPanelSelec = new javax.swing.JPanel();
         Menu = new javax.swing.JPanel();
         Clientes = new javax.swing.JPanel();
@@ -195,6 +197,15 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jBFunc.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        jBFunc.setText("Funcionários");
+
+        jBEstoque.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        jBEstoque.setText("Estoque");
+
+        jbTrans.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        jbTrans.setText("Transações");
+
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
@@ -212,6 +223,9 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(jLabelEmpresa)))
                 .addContainerGap(28, Short.MAX_VALUE))
+            .addComponent(jBFunc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jBEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbTrans, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,9 +237,15 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelEmpresa)
                 .addGap(23, 23, 23)
-                .addComponent(jBMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jBMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbTrans, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -844,7 +864,6 @@ public class Menu extends javax.swing.JFrame {
 
     private void jBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuActionPerformed
 
-        // jButton1.setBackground(Color.green); mudando a cor do botão
 
     }//GEN-LAST:event_jBMenuActionPerformed
 
@@ -1162,6 +1181,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jBAvancar;
     private javax.swing.JButton jBCancelar;
     private javax.swing.JButton jBClientes;
+    private javax.swing.JButton jBEstoque;
+    private javax.swing.JButton jBFunc;
     private javax.swing.JButton jBMenu;
     private javax.swing.JButton jBNovoCliente;
     private javax.swing.JButton jBSalvar;
@@ -1261,6 +1282,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTTel8;
     private javax.swing.JTextField jTTel9;
     private javax.swing.JTextField jTTelefone;
+    private javax.swing.JButton jbTrans;
     // End of variables declaration//GEN-END:variables
 
     public void PreencherCamposMenuClientes(ClienteData ClienteData) {
