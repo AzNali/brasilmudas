@@ -13,5 +13,5 @@ import java.util.ArrayList;
  */
 public abstract class Pessoa extends Database {
     
-    public abstract boolean SalvarPessoa(Database Data);
+    public abstract boolean SalvarPessoa(Database Data,int i);
 }

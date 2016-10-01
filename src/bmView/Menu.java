@@ -5,19 +5,11 @@
  */
 package bmView;
 
-import bmController.ClientesController;
 import bmController.Controller;
 import bmModel.ClienteData;
 import java.awt.CardLayout;
-import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
 
 /**
  *
@@ -53,8 +45,9 @@ public class Menu extends javax.swing.JFrame {
         }
         //</editor-fold>
         initComponents();
-        setVisible(true);
+        //setVisible(true); Coloquei setVisible para o controller.
         i = 0;
+        
     }
 
     /**
@@ -838,7 +831,6 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void jBClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClientesActionPerformed
-
         
     }//GEN-LAST:event_jBClientesActionPerformed
 
@@ -847,20 +839,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jCBAcaoActionPerformed
 
     private void jBNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoClienteActionPerformed
-            ClienteData.getNome().clear();
-            ClienteData.getTelefone().clear();
-            ClienteData.getCelular().clear();
-            ClienteData.getEmpresa().clear();
-            ClienteData.getCidade().clear();
-            ClienteData.getEstado().clear();
-            ClienteData.getCEP().clear();
-            ClienteData.getRua().clear();
-            ClienteData.getComplemento().clear();    
-            ClienteData.getEmail().clear();
-
-        CardLayout Card = (CardLayout) jPanelSelec.getLayout();
-        Card.show(jPanelSelec, "NovoCliente");
-
+    
     }//GEN-LAST:event_jBNovoClienteActionPerformed
 
     private void jBMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMenuActionPerformed
@@ -881,12 +860,13 @@ public class Menu extends javax.swing.JFrame {
             case 3:
                 break;
             case 4:
+                /*
                 if (ClienteData.Excluir(ClienteData, i)) {
                     jComboBox1.setSelectedIndex(0);
                     jComboBox1.hidePopup();                       
                     JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                    CallMenuClientes();
-                }
+                    DisplayJPanelClientes();
+                }*/
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
@@ -896,20 +876,22 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jBAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAvancarActionPerformed
+        
+    }//GEN-LAST:event_jBAvancarActionPerformed
+    public void Avancar(){
         jBVoltar.setEnabled(true);
         i += 10;
         jLPag.setText("Página:"+(i/10+1)+"");
-        PreencherCampos(ClienteData, i);
-    }//GEN-LAST:event_jBAvancarActionPerformed
-
-    private void jBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVoltarActionPerformed
-
+        
+    }
+    public void Voltar(){
         i -= 10;
         jLPag.setText("Página:"+(i/10+1)+"");
         if (i == 0) {
             jBVoltar.setEnabled(false);
         }
-        PreencherCampos(ClienteData, i);
+    }
+    private void jBVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVoltarActionPerformed
 
     }//GEN-LAST:event_jBVoltarActionPerformed
 
@@ -925,12 +907,13 @@ public class Menu extends javax.swing.JFrame {
             case 3:
                 break;
             case 4:
+                /*
                 if (ClienteData.Excluir(ClienteData,i+2)) {
                     jComboBox3.setSelectedIndex(0);
                     jComboBox3.hidePopup();
                     JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                    CallMenuClientes();
-                }
+                    DisplayJPanelClientes();
+                }*/
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
@@ -950,12 +933,13 @@ public class Menu extends javax.swing.JFrame {
             case 3:
                 break;
             case 4:
+                /*
                 if (ClienteData.Excluir(ClienteData,i+3)) {
                     jComboBox4.setSelectedIndex(0);
                     jComboBox4.hidePopup();
                     JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                    CallMenuClientes();
-                }
+                    DisplayJPanelClientes();
+                }*/
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
@@ -975,13 +959,13 @@ public class Menu extends javax.swing.JFrame {
             case 3:
                 break;
             case 4:
+                /*
                 if (ClienteData.Excluir(ClienteData, i+4)) {
                     jComboBox5.setSelectedIndex(0);
                     jComboBox5.hidePopup();
                     JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                    CallMenuClientes();
-                } else {
-                }
+                    DisplayJPanelClientes();
+                }*/
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
@@ -990,35 +974,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ActionPerformed
 
     private void jBSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalvarActionPerformed
-        ClienteData.getNome().add(jTNome.getText());
-        ClienteData.getTelefone().add(jTTelefone.getText());
-        ClienteData.getCelular().add(parseInt(jTCelular.getText()));
-        ClienteData.getEmpresa().add(jTEmpresa.getText());
-        ClienteData.getCidade().add(jTCidade.getText());
-        ClienteData.getEstado().add(jTEstado.getText());
-        ClienteData.getCEP().add(parseInt(jTCEP.getText()));
-        ClienteData.getRua().add(jTRua.getText());
-        ClienteData.getComplemento().add(jTComplemento.getText());
-        ClienteData.getEmail().add(jTEmail.getText());
-        
-        jTNome.setText("");
-        jTTelefone.setText("");
-        jTCelular.setText("");
-        jTEmpresa.setText("");
-        jTCidade.setText("");
-        jTCEP.setText("");
-        jTEstado.setText("");
-        jTRua.setText("");
-        jTComplemento.setText("");
-        jTEmail.setText("");
 
-        if (ClienteData.SalvarPessoa(ClienteData)) {
-            JOptionPane.showMessageDialog(this, "Contato salvo com sucesso.");
-        } else {
-            JOptionPane.showMessageDialog(this, "Erro ao salvar contato.");
-        }
-
-        CallMenuClientes();
     }//GEN-LAST:event_jBSalvarActionPerformed
 
     private void jTCel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCel1ActionPerformed
@@ -1029,24 +985,25 @@ public class Menu extends javax.swing.JFrame {
         int Index = jComboBox2.getSelectedIndex();
         switch (Index) {
             case 0:
-            break;
+                break;
             case 1:
-            break;
+                break;
             case 2:
-            break;
+                break;
             case 3:
-            break;
+                break;
             case 4:
-            if (ClienteData.Excluir(ClienteData, i+1)) {
-                jComboBox2.setSelectedIndex(0);
-                jComboBox2.hidePopup();
-                JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                CallMenuClientes();
-            }
-            break;
+                /*
+                if (ClienteData.Excluir(ClienteData, i+1)) {
+                    jComboBox2.setSelectedIndex(0);
+                    jComboBox2.hidePopup();
+                    JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
+                    DisplayJPanelClientes();
+                }*/
+                break;
             default:
-            JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
-            break;
+                JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
+                break;
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
@@ -1058,24 +1015,25 @@ public class Menu extends javax.swing.JFrame {
         int Index = jComboBox10.getSelectedIndex();
         switch (Index) {
             case 0:
-            break;
+                break;
             case 1:
-            break;
+                break;
             case 2:
-            break;
+                break;
             case 3:
-            break;
+                break;
             case 4:
-            if (ClienteData.Excluir(ClienteData, i+9)) {
-                jComboBox10.setSelectedIndex(0);
-                jComboBox10.hidePopup();
-                JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                CallMenuClientes();
-            }
-            break;
+                /*
+                if (ClienteData.Excluir(ClienteData, i+9)) {
+                    jComboBox10.setSelectedIndex(0);
+                    jComboBox10.hidePopup();
+                    JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
+                    DisplayJPanelClientes();
+                }*/
+                break;
             default:
-            JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
-            break;
+                JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
+                break;
         }
     }//GEN-LAST:event_jComboBox10ActionPerformed
 
@@ -1091,12 +1049,13 @@ public class Menu extends javax.swing.JFrame {
             case 3:
                 break;
             case 4:
+                /*
                 if (ClienteData.Excluir(ClienteData, i + 8)) {
                     jComboBox9.setSelectedIndex(0);
                     jComboBox9.hidePopup();
                     JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                    CallMenuClientes();
-                }
+                    DisplayJPanelClientes();
+                }*/
                 break;
             default:
                 JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
@@ -1108,24 +1067,25 @@ public class Menu extends javax.swing.JFrame {
         int Index = jComboBox8.getSelectedIndex();
         switch (Index) {
             case 0:
-            break;
+                break;
             case 1:
-            break;
+                break;
             case 2:
-            break;
+                break;
             case 3:
-            break;
+                break;
             case 4:
-            if (ClienteData.Excluir(ClienteData, i+7)) {
-                jComboBox8.setSelectedIndex(0);
-                jComboBox8.hidePopup();
-                JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                CallMenuClientes();
-            }
-            break;
+                /*
+                if (ClienteData.Excluir(ClienteData, i+7)) {
+                    jComboBox8.setSelectedIndex(0);
+                    jComboBox8.hidePopup();
+                    JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
+                    DisplayJPanelClientes();
+                }*/
+                break;
             default:
-            JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
-            break;
+                JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
+                break;
         }
     }//GEN-LAST:event_jComboBox8ActionPerformed
 
@@ -1133,24 +1093,25 @@ public class Menu extends javax.swing.JFrame {
         int Index = jComboBox7.getSelectedIndex();
         switch (Index) {
             case 0:
-            break;
+                break;
             case 1:
-            break;
+                break;
             case 2:
-            break;
+                break;
             case 3:
-            break;
+                break;
             case 4:
-            if (ClienteData.Excluir(ClienteData, i+6)) {
-                jComboBox7.setSelectedIndex(0);
-                jComboBox7.hidePopup();
-                JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                CallMenuClientes();
-            }
-            break;
+                /*
+                if (ClienteData.Excluir(ClienteData, i+6)) {
+                    jComboBox7.setSelectedIndex(0);
+                    jComboBox7.hidePopup();
+                    JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
+                    DisplayJPanelClientes();
+                }*/
+                break;
             default:
-            JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
-            break;
+                JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
+                break;
         }
     }//GEN-LAST:event_jComboBox7ActionPerformed
 
@@ -1158,24 +1119,25 @@ public class Menu extends javax.swing.JFrame {
         int Index = jComboBox6.getSelectedIndex();
         switch (Index) {
             case 0:
-            break;
+                break;
             case 1:
-            break;
+                break;
             case 2:
-            break;
+                break;
             case 3:
-            break;
+                break;
             case 4:
-            if (ClienteData.Excluir(ClienteData, i+5)) {
-                jComboBox6.setSelectedIndex(0);
-                jComboBox6.hidePopup();
-                JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
-                CallMenuClientes();
-            }
-            break;
+                /*
+                if (ClienteData.Excluir(ClienteData, i+5)) {
+                    jComboBox6.setSelectedIndex(0);
+                    jComboBox6.hidePopup();
+                    JOptionPane.showMessageDialog(this, "Contato excluido com sucesso.");
+                    DisplayJPanelClientes();
+                }*/
+                break;
             default:
-            JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
-            break;
+                JOptionPane.showMessageDialog(this, "Erro ao selecionar item do jComboBox.");
+                break;
         }
     }//GEN-LAST:event_jComboBox6ActionPerformed
 
@@ -1301,57 +1263,57 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTTelefone;
     // End of variables declaration//GEN-END:variables
 
-    public void PreencherCampos(ClienteData ClienteData, int i) {
-        LimparCampos();
+    public void PreencherCamposMenuClientes(ClienteData ClienteData) {
+        LimparCamposMenuClientes();
         int NumContatos = ClienteData.getNum();
         if (i < NumContatos) {
             jTNome1.setText(ClienteData.getNome().get(i));
-            jTTel1.setText(ClienteData.getTelefone().get(i));
+            jTTel1.setText(ClienteData.getTelefone().get(i).toString());
             jTCel1.setText(ClienteData.getCelular().get(i).toString());
             jTEmpresa1.setText(ClienteData.getEmpresa().get(i));
             if (i + 1 < NumContatos) {
                 jTNome2.setText(ClienteData.getNome().get(i + 1));
-                jTTel2.setText(ClienteData.getTelefone().get(i + 1));
+                jTTel2.setText(ClienteData.getTelefone().get(i + 1).toString());
                 jTCel2.setText(ClienteData.getCelular().get(i+1).toString());
                 jTEmpresa2.setText(ClienteData.getEmpresa().get(i+1));
                 if (i + 2 < NumContatos) {
                     jTNome3.setText(ClienteData.getNome().get(i + 2));
-                    jTTel3.setText(ClienteData.getTelefone().get(i + 2));
+                    jTTel3.setText(ClienteData.getTelefone().get(i + 2).toString());
                     jTCel3.setText(ClienteData.getCelular().get(i+2).toString());
                     jTEmpresa3.setText(ClienteData.getEmpresa().get(i+2));
                     if (i + 3 < NumContatos) {
                         jTNome4.setText(ClienteData.getNome().get(i + 3));
-                        jTTel4.setText(ClienteData.getTelefone().get(i + 3));
+                        jTTel4.setText(ClienteData.getTelefone().get(i + 3).toString());
                         jTCel4.setText(ClienteData.getCelular().get(i+3).toString());
                         jTEmpresa4.setText(ClienteData.getEmpresa().get(i+3));
                         if (i + 4 < NumContatos) {
                             jTNome5.setText(ClienteData.getNome().get(i + 4));
-                            jTTel5.setText(ClienteData.getTelefone().get(i + 4));
+                            jTTel5.setText(ClienteData.getTelefone().get(i + 4).toString());
                             jTCel5.setText(ClienteData.getCelular().get(i+4).toString());
                             jTEmpresa5.setText(ClienteData.getEmpresa().get(i+4));
                             if (i + 5< NumContatos) {
                                 jTNome6.setText(ClienteData.getNome().get(i+5));
-                                jTTel6.setText(ClienteData.getTelefone().get(i+ 5));
+                                jTTel6.setText(ClienteData.getTelefone().get(i+ 5).toString());
                                 jTCel6.setText(ClienteData.getCelular().get(i+ 5).toString());
                                 jTEmpresa6.setText(ClienteData.getEmpresa().get(i+ 5));
                                 if (i + 6 < NumContatos) {
                                     jTNome7.setText(ClienteData.getNome().get(i + 6));
-                                    jTTel7.setText(ClienteData.getTelefone().get(i + 6));
+                                    jTTel7.setText(ClienteData.getTelefone().get(i + 6).toString());
                                     jTCel7.setText(ClienteData.getCelular().get(i+6).toString());
                                     jTEmpresa7.setText(ClienteData.getEmpresa().get(i+6));
                                     if (i + 7 < NumContatos) {
                                         jTNome8.setText(ClienteData.getNome().get(i + 7));
-                                        jTTel8.setText(ClienteData.getTelefone().get(i + 7));
+                                        jTTel8.setText(ClienteData.getTelefone().get(i + 7).toString());
                                         jTCel8.setText(ClienteData.getCelular().get(i+7).toString());
                                         jTEmpresa8.setText(ClienteData.getEmpresa().get(i+7));
                                         if (i + 8 < NumContatos) {
                                             jTNome9.setText(ClienteData.getNome().get(i + 8));
-                                            jTTel9.setText(ClienteData.getTelefone().get(i + 8));
+                                            jTTel9.setText(ClienteData.getTelefone().get(i + 8).toString());
                                             jTCel9.setText(ClienteData.getCelular().get(i+8).toString());
                                             jTEmpresa9.setText(ClienteData.getEmpresa().get(i+8));
                                             if (i + 9 < NumContatos) {
                                                 jTNome10.setText(ClienteData.getNome().get(i + 9));
-                                                jTTel10.setText(ClienteData.getTelefone().get(i + 9));
+                                                jTTel10.setText(ClienteData.getTelefone().get(i + 9).toString());
                                                 jTCel10.setText(ClienteData.getCelular().get(i+9).toString());
                                                 jTEmpresa10.setText(ClienteData.getEmpresa().get(i + 9));
                                             }
@@ -1366,7 +1328,7 @@ public class Menu extends javax.swing.JFrame {
         }
     }
 
-    public void LimparCampos() {
+    public void LimparCamposMenuClientes() {
         jTNome1.setText("");jTNome2.setText("");jTNome3.setText("");jTNome4.setText("");jTNome5.setText("");
         jTNome6.setText("");jTNome7.setText("");jTNome8.setText("");jTNome9.setText("");jTNome10.setText("");
         
@@ -1381,7 +1343,7 @@ public class Menu extends javax.swing.JFrame {
 
     }
 
-    private void CallMenuClientes() {
+    public void DisplayJPanelClientes() {
         CardLayout Card = (CardLayout) jPanelSelec.getLayout();
         Card.show(jPanelSelec, "Clientes");
         
@@ -1390,6 +1352,7 @@ public class Menu extends javax.swing.JFrame {
     }
     
     public void addController(Controller Control) {
+
         //Botões do Menu
         jBMenu.addActionListener(Control);
         jBClientes.addActionListener(Control);
@@ -1398,6 +1361,16 @@ public class Menu extends javax.swing.JFrame {
         jBAvancar.addActionListener(Control);
         jBVoltar.addActionListener(Control);
         jBNovoCliente.addActionListener(Control);
+        jComboBox1.addActionListener(Control);
+        jComboBox2.addActionListener(Control);
+        jComboBox3.addActionListener(Control);
+        jComboBox4.addActionListener(Control);
+        jComboBox5.addActionListener(Control);
+        jComboBox6.addActionListener(Control);
+        jComboBox7.addActionListener(Control);
+        jComboBox8.addActionListener(Control);
+        jComboBox9.addActionListener(Control);
+        jComboBox10.addActionListener(Control);
         
         //Botões Salvar Cliente   
         jBSalvar.addActionListener(Control);
@@ -1408,6 +1381,39 @@ public class Menu extends javax.swing.JFrame {
 
     public void ViewMenu() {
         jBVoltar.setEnabled(false);
-        CallMenuClientes();
+        DisplayJPanelClientes();
+    }
+
+    public void SClientes(ArrayList<String> A){
+        
+        A.add(jTNome.getText());
+        A.add(jTTelefone.getText());
+        A.add(jTCelular.getText());
+        A.add(jTEmpresa.getText());
+        A.add(jTCidade.getText());
+        A.add(jTEstado.getText());
+        A.add(jTCEP.getText());
+        A.add(jTRua.getText());
+        A.add(jTComplemento.getText());
+        A.add(jTEmail.getText());
+        
+        jTNome.setText("");
+        jTTelefone.setText("");
+        jTCelular.setText("");
+        jTEmpresa.setText("");
+        jTCidade.setText("");
+        jTCEP.setText("");
+        jTEstado.setText("");
+        jTRua.setText("");
+        jTComplemento.setText("");
+        jTEmail.setText("");
+    }
+    public void DisplayJPanelNovoCliente(){
+        CardLayout Card = (CardLayout) jPanelSelec.getLayout();
+        Card.show(jPanelSelec, "NovoCliente");
+    }
+    
+    public void Mensagens(String Mensagem){
+        JOptionPane.showMessageDialog(this, Mensagem);
     }
 }

@@ -11,40 +11,70 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author az
+ * @author Matheus Carvalho Nali e Bruna Yukari Fujii Yoshida
  */
 //Classe responsável pelo controle do direcionamento dos eventos ocorridos no View para as respectivas classes de processamento desses eventos.
 public class Controller implements ActionListener {
-
-    ClientesController ClientesController;
-    Menu Menu;
-khgjhygkjg
-    Controller() {
-        Menu Menu = new Menu();
-        Controller Control = new Controller();
-
-        Menu.addController(Control);
+    
+    private ClientesController ClientesController;
+    private Menu Menu;
+   
+    public Controller() {
+        
     }
-
-    public static void main(String[] args) {
-
+    
+    public void addView(Menu View){
+        this.Menu = (Menu)View;
     }
-
+        
+    public void startMainWindow(){
+        this.Menu.setVisible(true);
+    }
+  
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        switch(e.getActionCommand()){
+        ////////////////////////////////////////////////////////////////////////
+        //Botões do Menu
+            case "Menu":
+                break;
+        
+            case "Clientes":
 
-        if ("Clientes".equals(e.getActionCommand())) {
-            if (ClientesController == null) {
-                ClientesController = new ClientesController(Menu);
-            }
+                if (ClientesController == null) {
+                    ClientesController = new ClientesController(Menu);
+                }
 
-            ClientesController.ClientesCriar();
+                ClientesController.ClientesCriar();
+                ClientesController.ClientesDisplay();
+                break;
+        ////////////////////////////////////////////////////////////////////////
+        //Botões Menu Cliente.
+            case "Novo Cliente":
+                Menu.DisplayJPanelNovoCliente();
+                break;
+            case "Avancar":
+                ClientesController.Avancar();
+                break;
             
-            Menu.ViewMenu();
-            ClientesController.ClientesDisplay();
-
+            case "Voltar":
+                ClientesController.Voltar();
+                break;
+        
+        //Botões Salvar Cliente 
+            case "Salvar":
+                ClientesController.SalvarCliente();
+                ClientesController.ClientesDisplay();
+                break;
             
-        }
+            case "Cancelar":
+                break;
+            
+            default :
+                break;
+        ////////////////////////////////////////////////////////////////////////
+        }   
     }
 }
 

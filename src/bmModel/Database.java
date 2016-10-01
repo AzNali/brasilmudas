@@ -22,7 +22,7 @@ public class Database {
 
     private ArrayList<Integer> ID = new ArrayList();
     private ArrayList<String> Nome = new ArrayList();
-    private ArrayList<String> Telefone = new ArrayList();
+    private ArrayList<Integer> Telefone = new ArrayList();
     private ArrayList<Integer> Celular = new ArrayList();
     private ArrayList<String> Empresa = new ArrayList();
     private ArrayList<String> Cidade = new ArrayList();
@@ -36,7 +36,7 @@ public class Database {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/brasilmudas?useSSL=false", "root", "surf112820");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/brasilmudas?useSSL=false", "root", "t2d002");
             Statement stmt = (Statement) con.createStatement();
             return stmt;
 
@@ -71,11 +71,11 @@ public class Database {
         this.Nome = Nome;
     }
 
-    public ArrayList<String> getTelefone() {
+    public ArrayList<Integer> getTelefone() {
         return Telefone;
     }
 
-    public void setTelefone(ArrayList<String> Telefone) {
+    public void setTelefone(ArrayList<Integer> Telefone) {
         this.Telefone = Telefone;
     }
 

@@ -21,9 +21,9 @@ public class ClienteData extends Pessoa {
 
     Statement stmt = Acesso();
 
-    public boolean SalvarPessoa(Database Data) {
+    public boolean SalvarPessoa(Database Data,int i) {
         try {
-            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Data.getNome().get(0) + "','" + Data.getTelefone().get(0) + "','" + Data.getCelular().get(0) + "','" + Data.getEmpresa().get(0) + "','" + Data.getCidade().get(0) + "','" + Data.getEstado().get(0) + "','" + Data.getCEP().get(0) + "','" + Data.getRua().get(0) + "','" + Data.getComplemento().get(0) + "','" + Data.getEmail().get(0) + "');";
+            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Data.getNome().get(i) + "','" + Data.getTelefone().get(i) + "','" + Data.getCelular().get(i) + "','" + Data.getEmpresa().get(i) + "','" + Data.getCidade().get(i) + "','" + Data.getEstado().get(i) + "','" + Data.getCEP().get(i) + "','" + Data.getRua().get(i) + "','" + Data.getComplemento().get(i) + "','" + Data.getEmail().get(i) + "');";
             System.out.println(Insert);
             stmt.executeUpdate(Insert);
 
@@ -61,28 +61,28 @@ public class ClienteData extends Pessoa {
 
             if (rs.next()) {
                 Data.getNome().add(rs.getString("Nome"));
-                Data.getTelefone().add(rs.getString("Telefone"));
+                Data.getTelefone().add(rs.getInt("Telefone"));
                 Data.getID().add(rs.getInt("ID"));
-                Data.getCelular().add(rs.getInt("Telefone"));
-                Data.getEmpresa().add(rs.getString("Nome"));
-                Data.getCidade().add(rs.getString("ID"));
-                Data.getEstado().add(rs.getString("Nome"));
-                Data.getCEP().add(rs.getInt("Telefone"));
-                Data.getRua().add(rs.getString("ID"));
-                Data.getComplemento().add(rs.getString("Nome"));
-                Data.getEmail().add(rs.getString("Nome"));
+                Data.getCelular().add(rs.getInt("Celular"));
+                Data.getEmpresa().add(rs.getString("Empresa"));
+                Data.getCidade().add(rs.getString("Cidade"));
+                Data.getEstado().add(rs.getString("Estado"));
+                Data.getCEP().add(rs.getInt("CEP"));
+                Data.getRua().add(rs.getString("Rua"));
+                Data.getComplemento().add(rs.getString("Complemento"));
+                Data.getEmail().add(rs.getString("Email"));
                 while (rs.next()) {
                     Data.getNome().add(rs.getString("Nome"));
-                    Data.getTelefone().add(rs.getString("Telefone"));
+                    Data.getTelefone().add(rs.getInt("Telefone"));
                     Data.getID().add(rs.getInt("ID"));
-                    Data.getCelular().add(rs.getInt("Telefone"));
-                    Data.getEmpresa().add(rs.getString("Nome"));
-                    Data.getCidade().add(rs.getString("ID"));
-                    Data.getEstado().add(rs.getString("Nome"));
-                    Data.getCEP().add(rs.getInt("Telefone"));
-                    Data.getRua().add(rs.getString("ID"));
-                    Data.getComplemento().add(rs.getString("Nome"));
-                    Data.getEmail().add(rs.getString("Nome"));
+                    Data.getCelular().add(rs.getInt("Celular"));
+                    Data.getEmpresa().add(rs.getString("Empresa"));
+                    Data.getCidade().add(rs.getString("Cidade"));
+                    Data.getEstado().add(rs.getString("Estado"));
+                    Data.getCEP().add(rs.getInt("CEP"));
+                    Data.getRua().add(rs.getString("Rua"));
+                    Data.getComplemento().add(rs.getString("Complemento"));
+                    Data.getEmail().add(rs.getString("Email"));
 
                 }
                 return true;
