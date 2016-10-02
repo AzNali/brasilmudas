@@ -1084,6 +1084,7 @@
             <Component class="javax.swing.JButton" name="jBAvancar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Avan&#xe7;ar"/>
+                <Property name="actionCommand" type="java.lang.String" value="Avancar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAvancarActionPerformed"/>

@@ -23,7 +23,7 @@ public class Main {
                 Menu Menu = new Menu();
                 Controller Control = new Controller();
                 Database MysqlCon = new Database();
-
+                
                 Control.addView(Menu);
                 Control.addCon(MysqlCon);
                 Control.startMainWindow();

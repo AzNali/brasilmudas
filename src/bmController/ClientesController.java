@@ -9,8 +9,6 @@ import bmModel.ClienteData;
 import bmModel.Database;
 import bmView.Menu;
 import java.util.ArrayList;
-import static java.lang.Integer.parseInt;
-import java.sql.Statement;
 
 /**
  *
@@ -53,32 +51,29 @@ public class ClientesController{
             A.clear();
         }
         
-        Menu.SClientes(A);
-        
-        ClienteData.getNome().add(A.get(0));
-        ClienteData.getTelefone().add(parseInt(A.get(1)));
-        ClienteData.getCelular().add(parseInt(A.get(2)));
-        ClienteData.getEmpresa().add(A.get(3));
-        ClienteData.getCidade().add(A.get(4));
-        ClienteData.getEstado().add(A.get(5));
-        ClienteData.getCEP().add(parseInt(A.get(6)));
-        ClienteData.getRua().add(A.get(7));
-        ClienteData.getComplemento().add(A.get(8));
-        ClienteData.getEmail().add(A.get(9));
-        
-        if (ClienteData.SalvarPessoa(ClienteData,(ClienteData.getNum()))) {
-            Menu.Mensagens("Cliente salvo com sucesso.");
-        } else {
-            Menu.Mensagens("Erro ao salvar cliente.");
+        if(Menu.SClientes(A)){
+            if (ClienteData.SalvarPessoa(A)) {
+                Menu.Mensagens("Cliente salvo com sucesso.");
+                ClientesDisplay();
+            } else {
+                Menu.Mensagens("Erro ao salvar cliente.");
+            }
+        }
+        else{    
+            Menu.DisplayJPanelNovoCliente();
         }
     }
+    
     protected void Avancar(){
         Menu.Avancar();
         Menu.PreencherCamposMenuClientes(ClienteData);
     }
+    
     protected void Voltar(){
+        Menu.Voltar();
         Menu.PreencherCamposMenuClientes(ClienteData);
     }
+    
     protected void jComboBox1(){
         int Index = Menu.getSelectedIndex(1);
         switch (Index) {

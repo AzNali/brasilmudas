@@ -20,7 +20,7 @@ public abstract class Pessoa {
         this.stmt = stmt;
     }
  
-    public abstract boolean SalvarPessoa(Pessoa Pessoa, int i);
+    public abstract boolean SalvarPessoa(ArrayList<String> A);
     
     private int Num;
     

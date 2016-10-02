@@ -54,7 +54,7 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
         i = 0;
         
-        Toolkit tk = Toolkit.getDefaultToolkit();
+        //Toolkit tk = Toolkit.getDefaultToolkit();
         //int xsize = (int) tk.getScreenSize().getWidth();
         //int ysize = (int) tk.getScreenSize().getWidth();
         
@@ -736,6 +736,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         jBAvancar.setText("Avançar");
+        jBAvancar.setActionCommand("Avancar");
         jBAvancar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBAvancarActionPerformed(evt);
@@ -1295,53 +1296,140 @@ public class Menu extends javax.swing.JFrame {
         int NumContatos = ClienteData.getNum();
         if (i < NumContatos) {
             jTNome1.setText(ClienteData.getNome().get(i));
-            jTTel1.setText(ClienteData.getTelefone().get(i).toString());
-            jTCel1.setText(ClienteData.getCelular().get(i).toString());
+            
+            if(ClienteData.getTelefone().get(i) == 0)
+                jTTel1.setText("");
+            else    
+                jTTel1.setText(ClienteData.getTelefone().get(i).toString());
+            
+            if(ClienteData.getCelular().get(i) == 0)
+                jTCel1.setText("");
+            else   
+                jTCel1.setText(ClienteData.getCelular().get(i).toString());
+            
             jTEmpresa1.setText(ClienteData.getEmpresa().get(i));
             if (i + 1 < NumContatos) {
                 jTNome2.setText(ClienteData.getNome().get(i + 1));
-                jTTel2.setText(ClienteData.getTelefone().get(i + 1).toString());
-                jTCel2.setText(ClienteData.getCelular().get(i+1).toString());
-                jTEmpresa2.setText(ClienteData.getEmpresa().get(i+1));
+                
+                if (ClienteData.getTelefone().get(i+1) == 0)
+                    jTTel2.setText("");
+                else 
+                    jTTel2.setText(ClienteData.getTelefone().get(i+1).toString());
+                
+                if (ClienteData.getCelular().get(i) == 0)
+                    jTCel2.setText("");
+                else 
+                    jTCel2.setText(ClienteData.getCelular().get(i).toString());
+                
+                jTEmpresa2.setText(ClienteData.getEmpresa().get(i + 1));
                 if (i + 2 < NumContatos) {
                     jTNome3.setText(ClienteData.getNome().get(i + 2));
-                    jTTel3.setText(ClienteData.getTelefone().get(i + 2).toString());
-                    jTCel3.setText(ClienteData.getCelular().get(i+2).toString());
-                    jTEmpresa3.setText(ClienteData.getEmpresa().get(i+2));
+                    
+                    if (ClienteData.getTelefone().get(i+2) == 0)
+                        jTTel3.setText("");
+                    else
+                        jTTel3.setText(ClienteData.getTelefone().get(i+2).toString());
+                    
+                    if (ClienteData.getCelular().get(i+2) == 0)
+                        jTCel3.setText("");
+                    else 
+                        jTCel3.setText(ClienteData.getCelular().get(i+2).toString());
+                    
+                    jTEmpresa3.setText(ClienteData.getEmpresa().get(i + 2));
                     if (i + 3 < NumContatos) {
                         jTNome4.setText(ClienteData.getNome().get(i + 3));
-                        jTTel4.setText(ClienteData.getTelefone().get(i + 3).toString());
-                        jTCel4.setText(ClienteData.getCelular().get(i+3).toString());
-                        jTEmpresa4.setText(ClienteData.getEmpresa().get(i+3));
+                        
+                        if(ClienteData.getTelefone().get(i+3) == 0)
+                            jTTel4.setText("");
+                        else    
+                            jTTel4.setText(ClienteData.getTelefone().get(i+3).toString());
+
+                        if(ClienteData.getCelular().get(i+3) == 0)
+                            jTCel4.setText("");
+                        else   
+                            jTCel4.setText(ClienteData.getCelular().get(i+3).toString());
+                            
+                        jTEmpresa4.setText(ClienteData.getEmpresa().get(i + 3));
                         if (i + 4 < NumContatos) {
                             jTNome5.setText(ClienteData.getNome().get(i + 4));
-                            jTTel5.setText(ClienteData.getTelefone().get(i + 4).toString());
-                            jTCel5.setText(ClienteData.getCelular().get(i+4).toString());
+                            
+                            if(ClienteData.getTelefone().get(i+4) == 0)
+                                jTTel5.setText("");
+                            else    
+                                jTTel5.setText(ClienteData.getTelefone().get(i+4).toString());
+
+                            if(ClienteData.getCelular().get(i+4) == 0)
+                                jTCel5.setText("");
+                            else   
+                                jTCel5.setText(ClienteData.getCelular().get(i+4).toString());
+                            
                             jTEmpresa5.setText(ClienteData.getEmpresa().get(i+4));
                             if (i + 5< NumContatos) {
                                 jTNome6.setText(ClienteData.getNome().get(i+5));
-                                jTTel6.setText(ClienteData.getTelefone().get(i+ 5).toString());
-                                jTCel6.setText(ClienteData.getCelular().get(i+ 5).toString());
+                                if(ClienteData.getTelefone().get(i+5) == 0)
+                                    jTTel6.setText("");
+                                else    
+                                    jTTel6.setText(ClienteData.getTelefone().get(i+5).toString());
+
+                                if(ClienteData.getCelular().get(i+5) == 0)
+                                    jTCel6.setText("");
+                                else   
+                                    jTCel6.setText(ClienteData.getCelular().get(i+5).toString());
+                                
                                 jTEmpresa6.setText(ClienteData.getEmpresa().get(i+ 5));
                                 if (i + 6 < NumContatos) {
                                     jTNome7.setText(ClienteData.getNome().get(i + 6));
-                                    jTTel7.setText(ClienteData.getTelefone().get(i + 6).toString());
-                                    jTCel7.setText(ClienteData.getCelular().get(i+6).toString());
+                                    
+                                    if(ClienteData.getTelefone().get(i+6) == 0)
+                                        jTTel7.setText("");
+                                    else    
+                                        jTTel7.setText(ClienteData.getTelefone().get(i+6).toString());
+
+                                    if(ClienteData.getCelular().get(i+6) == 0)
+                                        jTCel7.setText("");
+                                    else   
+                                        jTCel7.setText(ClienteData.getCelular().get(i+6).toString());
+                                    
                                     jTEmpresa7.setText(ClienteData.getEmpresa().get(i+6));
                                     if (i + 7 < NumContatos) {
                                         jTNome8.setText(ClienteData.getNome().get(i + 7));
-                                        jTTel8.setText(ClienteData.getTelefone().get(i + 7).toString());
-                                        jTCel8.setText(ClienteData.getCelular().get(i+7).toString());
+                                        
+                                        if(ClienteData.getTelefone().get(i+7) == 0)
+                                            jTTel8.setText("");
+                                        else    
+                                            jTTel8.setText(ClienteData.getTelefone().get(i+7).toString());
+
+                                        if(ClienteData.getCelular().get(i+7) == 0)
+                                            jTCel8.setText("");
+                                        else   
+                                            jTCel8.setText(ClienteData.getCelular().get(i+7).toString());
+                                        
                                         jTEmpresa8.setText(ClienteData.getEmpresa().get(i+7));
                                         if (i + 8 < NumContatos) {
                                             jTNome9.setText(ClienteData.getNome().get(i + 8));
-                                            jTTel9.setText(ClienteData.getTelefone().get(i + 8).toString());
-                                            jTCel9.setText(ClienteData.getCelular().get(i+8).toString());
+                                            
+                                            if(ClienteData.getTelefone().get(i+8) == 0)
+                                                jTTel9.setText("");
+                                            else    
+                                                jTTel9.setText(ClienteData.getTelefone().get(i+8).toString());
+
+                                            if(ClienteData.getCelular().get(i+8) == 0)
+                                                jTCel9.setText("");
+                                            else   
+                                                jTCel9.setText(ClienteData.getCelular().get(i+8).toString());
+                                            
                                             jTEmpresa9.setText(ClienteData.getEmpresa().get(i+8));
                                             if (i + 9 < NumContatos) {
                                                 jTNome10.setText(ClienteData.getNome().get(i + 9));
-                                                jTTel10.setText(ClienteData.getTelefone().get(i + 9).toString());
-                                                jTCel10.setText(ClienteData.getCelular().get(i+9).toString());
+                                                if(ClienteData.getTelefone().get(i+9) == 0)
+                                                    jTTel10.setText("");
+                                                else    
+                                                    jTTel10.setText(ClienteData.getTelefone().get(i+9).toString());
+
+                                                if(ClienteData.getCelular().get(i+9) == 0)
+                                                    jTCel10.setText("");
+                                                else   
+                                                    jTCel10.setText(ClienteData.getCelular().get(i+9).toString());
                                                 jTEmpresa10.setText(ClienteData.getEmpresa().get(i + 9));
                                             }
                                         }
@@ -1414,19 +1502,48 @@ public class Menu extends javax.swing.JFrame {
         DisplayJPanelClientes();
     }
 
-    public void SClientes(ArrayList<String> A){
+    public boolean SClientes(ArrayList<String> A){
+        if(jTNome.getText().equals("")){
+            Mensagens("Erro, Preencha o campo Nome.");
+            return false;
+        }
+        else    
+            A.add(jTNome.getText());
+
+        if (!jTTelefone.getText().equals("")) {
+            A.add(jTTelefone.getText());
+        } else {
+            A.add("DEFAULT");
+        }
+        if (!jTCelular.getText().equals("")) {
+            A.add(jTCelular.getText());
+        } else {
+            A.add("DEFAULT");
+        }
         
-        A.add(jTNome.getText());
-        A.add(jTTelefone.getText());
-        A.add(jTCelular.getText());
         A.add(jTEmpresa.getText());
-        A.add(jTCidade.getText());
-        A.add(jTEstado.getText());
-        A.add(jTCEP.getText());
-        A.add(jTRua.getText());
-        A.add(jTComplemento.getText());
-        A.add(jTEmail.getText());
+   
         
+        A.add(jTCidade.getText());
+
+        
+        A.add(jTEstado.getText());
+   
+        if (!jTCEP.getText().equals("")) {
+            A.add(jTCEP.getText());
+        } else {
+            A.add("DEFAULT");
+        }
+
+        A.add(jTRua.getText());
+   
+
+        A.add(jTComplemento.getText());
+
+
+        A.add(jTEmail.getText());
+
+
         jTNome.setText("");
         jTTelefone.setText("");
         jTCelular.setText("");
@@ -1437,6 +1554,8 @@ public class Menu extends javax.swing.JFrame {
         jTRua.setText("");
         jTComplemento.setText("");
         jTEmail.setText("");
+        
+        return true;
     }
     public void DisplayJPanelNovoCliente(){
         CardLayout Card = (CardLayout) jPanelSelec.getLayout();

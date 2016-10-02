@@ -99,7 +99,6 @@ public class Controller implements ActionListener {
                 ClientesController.jComboBox9();
                 break;
             case "ComboBox10":
-                
                 ClientesController.jComboBox10();
                 break;    
                 
@@ -107,14 +106,14 @@ public class Controller implements ActionListener {
         //Botões Salvar Cliente 
             case "Salvar":
                 ClientesController.SalvarCliente();
-                ClientesController.ClientesDisplay();
+
                 break;
             
             case "Cancelar":
                 break;
             
             case "FazerLogin":
-                
+
                     
                 
             default :

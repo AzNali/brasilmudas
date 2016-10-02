@@ -24,10 +24,11 @@ public class ClienteData extends Pessoa {
     }
 
     
-    public boolean SalvarPessoa(Pessoa Pessoa,int i) {
+    public boolean SalvarPessoa(ArrayList<String> A) {
         try {
-            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Pessoa.getNome().get(i) + "','" + Pessoa.getTelefone().get(i) + "','" + Pessoa.getCelular().get(i) + "','" + Pessoa.getEmpresa().get(i) + "','" + Pessoa.getCidade().get(i) + "','" + Pessoa.getEstado().get(i) + "','" + Pessoa.getCEP().get(i) + "','" + Pessoa.getRua().get(i) + "','" + Pessoa.getComplemento().get(i) + "','" + Pessoa.getEmail().get(i) + "');";
-            System.out.println(Insert);
+                    
+            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('"+ A.get(0) + "'," +A.get(1) + "," + A.get(2) + ",'" + A.get(3) + "','" + A.get(4) + "','" + A.get(5) + "'," + A.get(6) + ",'" + A.get(7) + "','" +A.get(8) + "','" + A.get(9) +"');";
+
             stmt.executeUpdate(Insert);
 
             return true;
