@@ -5,9 +5,11 @@
  */
 package bmController;
 
+import bmModel.Database;
 import bmView.Menu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Statement;
 
 /**
  *
@@ -17,6 +19,7 @@ import java.awt.event.ActionListener;
 public class Controller implements ActionListener {
     
     private ClientesController ClientesController;
+    private Database MysqlCon;
     private Menu Menu;
    
     public Controller() {
@@ -26,11 +29,16 @@ public class Controller implements ActionListener {
     public void addView(Menu View){
         this.Menu = (Menu)View;
     }
+    
+    public void addCon(Database MysqlCon) {
+        this.MysqlCon = (Database) MysqlCon;
+        
+    }
         
     public void startMainWindow(){
         this.Menu.setVisible(true);
     }
-  
+
     @Override
     public void actionPerformed(ActionEvent e) {
         
@@ -44,6 +52,7 @@ public class Controller implements ActionListener {
 
                 if (ClientesController == null) {
                     ClientesController = new ClientesController(Menu);
+                    ClientesController.addCon(MysqlCon);
                 }
 
                 ClientesController.ClientesCriar();
@@ -71,8 +80,13 @@ public class Controller implements ActionListener {
             case "Cancelar":
                 break;
             
+            case "FazerLogin":
+                
+                    
+                
             default :
                 break;
+                
         ////////////////////////////////////////////////////////////////////////
         }   
     }

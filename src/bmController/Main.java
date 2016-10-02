@@ -5,7 +5,9 @@
  */
 package bmController;
 
+import bmModel.Database;
 import bmView.Menu;
+import java.sql.Statement;
 
 /**
  *
@@ -13,14 +15,17 @@ import bmView.Menu;
  */
 public class Main {
     
+    
     public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
                 Menu Menu = new Menu();
                 Controller Control = new Controller();
-                
+                Database MysqlCon = new Database();
+
                 Control.addView(Menu);
+                Control.addCon(MysqlCon);
                 Control.startMainWindow();
                 Menu.addController(Control);
             }

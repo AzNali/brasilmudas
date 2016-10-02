@@ -6,12 +6,11 @@
 package bmController;
 
 import bmModel.ClienteData;
+import bmModel.Database;
 import bmView.Menu;
-import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
 import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.parseInt;
+import java.sql.Statement;
 
 /**
  *
@@ -20,17 +19,23 @@ import static java.lang.Integer.parseInt;
 public class ClientesController{
     Menu Menu;
     ArrayList<String> A;
-      
+    
+    private Database MysqlCon;
     public ClienteData ClienteData;
 
     ClientesController(Menu Menu) {
         this.Menu = Menu;
         
     }
+
+    public void addCon(Database MysqlCon) {
+        this.MysqlCon = (Database) MysqlCon;
+
+    }
     
     public void ClientesCriar(){
         if(ClienteData == null)
-            ClienteData = new ClienteData();
+            ClienteData = new ClienteData (MysqlCon.Acesso());
             
     }
     

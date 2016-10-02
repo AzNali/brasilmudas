@@ -33,7 +33,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanelMenu" max="32767" attributes="0"/>
-          <Component id="jPanelSelec" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanelSelec" alignment="0" pref="940" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -58,13 +58,13 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabelLogo" min="-2" max="-2" attributes="0"/>
+                              <Component id="Logo" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabelEmpresa" min="-2" max="-2" attributes="0"/>
+                          <Component id="LabelEmpresa" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -78,11 +78,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabelLogo" min="-2" max="-2" attributes="0"/>
+                  <Component id="Logo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabelEmpresa" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelEmpresa" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jBMenu" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -99,14 +99,14 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelLogo">
+        <Component class="javax.swing.JLabel" name="Logo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/bmView/Logo2.png"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelEmpresa">
+        <Component class="javax.swing.JLabel" name="LabelEmpresa">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Noto Sans" size="14" style="0"/>
@@ -171,6 +171,172 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
       <SubComponents>
+        <Container class="javax.swing.JPanel" name="Login">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card8"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="LoginPanelBack1" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LoginPanelBack1" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="LoginPanelBack1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="45" green="97" red="48" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="LoginPanelBack2" alignment="1" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="307" max="-2" attributes="0"/>
+                          <Component id="LoginPanelBack2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="362" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="LoginPanelBack2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="27" green="79" red="30" type="rgb"/>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace pref="455" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="PasswordIcon" min="-2" max="-2" attributes="0"/>
+                                          <Component id="UserIcon" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="password" min="-2" pref="175" max="-2" attributes="0"/>
+                                              <Component id="user" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="InfoSenha" min="-2" max="-2" attributes="0"/>
+                                          <Component id="InfoUser" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jBEntrar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="user" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="InfoUser" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                      <Component id="password" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="InfoSenha" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="UserIcon" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                      <Component id="PasswordIcon" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <Component id="jBEntrar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="jBEntrar">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Entrar"/>
+                        <Property name="actionCommand" type="java.lang.String" value="FazerLogin"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEntrarActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="InfoSenha">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="fe" green="fe" red="fe" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Professor, digite aqui sua senha do mysql."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="password">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PasswordIcon">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/bmView/Password.png"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="UserIcon">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/bmView/Login.png"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="user">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="root"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="InfoUser">
+                      <Properties>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="fe" green="fe" red="fe" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Trocar se seu usu&#xe1;rio no mysql for diferente de root."/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
         <Container class="javax.swing.JPanel" name="Menu">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -181,12 +347,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1015" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1181" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="730" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="940" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -228,7 +394,7 @@
                               <Component id="jTPesquisar" min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="258" max="32767" attributes="0"/>
+                      <EmptySpace pref="424" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -284,7 +450,7 @@
                       <Component id="jP1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLPag" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="216" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBAvancar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -346,136 +512,130 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jTNome1" min="-2" pref="160" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="jTTel1" min="-2" pref="170" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jTCel1" min="-2" pref="170" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome3" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome5" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome4" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox10" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome10" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome9" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome8" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome7" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTNome6" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jTNome2" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTTel1" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTTel2" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTCel1" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="jTCel2" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="jTEmpresa1" min="-2" pref="170" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome3" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome5" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome4" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox10" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome10" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox9" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome9" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox8" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome8" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome7" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTNome6" min="-2" pref="160" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTTel4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTTel10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jTNome2" min="-2" pref="160" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                          <Component id="jTTel2" min="-2" pref="170" max="-2" attributes="0"/>
-                                      </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jTEmpresa2" min="-2" pref="170" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTCel4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                      <Component id="jTCel2" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="jTEmpresa2" min="-2" pref="170" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTEmpresa4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                                          <Component id="jTEmpresa10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTEmpresa4" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa3" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa5" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa6" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa7" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa8" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa9" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresa10" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jComboBox5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jComboBox5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox6" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -487,118 +647,133 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="jTEmpresa1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="jTCel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="jTCel4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel7" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTCel10" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jTCel1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jCheckBox1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTNome1" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTTel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="jTEmpresa2" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                          <Component id="jTEmpresa1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jCheckBox1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTNome1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTTel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jTEmpresa2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTNome2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTTel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                          <Component id="jTEmpresa3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTNome3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTTel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                          <Component id="jTEmpresa4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTNome4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBox4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTTel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jTEmpresa5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTNome5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBox5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTEmpresa6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jCheckBox6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTNome6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTEmpresa7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                          <Component id="jTNome7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBox7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTEmpresa8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                          <Component id="jTNome8" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBox8" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTEmpresa9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                          <Component id="jTNome9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBox9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jTEmpresa10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBox10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTNome10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jCheckBox10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jTTel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Component id="jTNome2" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox2" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jTTel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTCel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="jTEmpresa3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTNome3" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox3" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTTel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="jTEmpresa4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTNome4" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTTel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jTCel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTEmpresa5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTNome5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox5" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTEmpresa6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jCheckBox6" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTNome6" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTEmpresa7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Component id="jTNome7" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox7" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTEmpresa8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Component id="jTNome8" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox8" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTCel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTEmpresa9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Component id="jTNome9" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox9" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jTCel10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTEmpresa10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTNome10" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox10" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jTTel10" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="37" max="32767" attributes="0"/>
                       </Group>
@@ -607,6 +782,24 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox8">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox10">
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox1">
                   <Properties>
@@ -619,6 +812,7 @@
                         <StringItem index="4" value="Deletar Contato"/>
                       </StringArray>
                     </Property>
+                    <Property name="actionCommand" type="java.lang.String" value="comboBoxChanged1"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
@@ -626,28 +820,6 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome1">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTNome1ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel1">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa1">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel1">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCel1ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome2">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel2">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel2">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa2">
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox2">
                   <Properties>
@@ -660,6 +832,7 @@
                         <StringItem index="4" value="Deletar Contato"/>
                       </StringArray>
                     </Property>
+                    <Property name="actionCommand" type="java.lang.String" value="comboBoxChanged2"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
@@ -667,16 +840,6 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome3">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel3">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel3">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa3">
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox3">
                   <Properties>
@@ -697,16 +860,6 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox3">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome4">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel4">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel4">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa4">
-                </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox4">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -725,16 +878,6 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox4">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome5">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel5">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel5">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa5">
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox5">
                   <Properties>
@@ -755,62 +898,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox5">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome10">
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox10">
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox9">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome9">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome8">
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox8">
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox7">
-                </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox6">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome6">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTNome7">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel6">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel7">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel8">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel9">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTTel10">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel10">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel9">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel8">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel7">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTCel6">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCel6ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa6">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa7">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa8">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa9">
-                </Component>
-                <Component class="javax.swing.JTextField" name="jTEmpresa10">
-                </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox10">
+                <Component class="javax.swing.JComboBox" name="jComboBox6">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="5">
@@ -823,45 +911,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox10ActionPerformed"/>
-                  </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox9">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="A&#xe7;&#xf5;es"/>
-                        <StringItem index="1" value="Fazer pedido"/>
-                        <StringItem index="2" value="Receber pagamento"/>
-                        <StringItem index="3" value="Editar Contato"/>
-                        <StringItem index="4" value="Deletar Contato"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox9ActionPerformed"/>
-                  </Events>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox8">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
-                        <StringItem index="0" value="A&#xe7;&#xf5;es"/>
-                        <StringItem index="1" value="Fazer pedido"/>
-                        <StringItem index="2" value="Receber pagamento"/>
-                        <StringItem index="3" value="Editar Contato"/>
-                        <StringItem index="4" value="Deletar Contato"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox8ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -886,7 +936,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox6">
+                <Component class="javax.swing.JComboBox" name="jComboBox8">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="5">
@@ -899,11 +949,138 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox8ActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox9">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="A&#xe7;&#xf5;es"/>
+                        <StringItem index="1" value="Fazer pedido"/>
+                        <StringItem index="2" value="Receber pagamento"/>
+                        <StringItem index="3" value="Editar Contato"/>
+                        <StringItem index="4" value="Deletar Contato"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox9ActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox10">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="A&#xe7;&#xf5;es"/>
+                        <StringItem index="1" value="Fazer pedido"/>
+                        <StringItem index="2" value="Receber pagamento"/>
+                        <StringItem index="3" value="Editar Contato"/>
+                        <StringItem index="4" value="Deletar Contato"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox10ActionPerformed"/>
+                  </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome1">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTNome1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTNome10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTEmpresa10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel1">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCel1ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel6">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTCel6ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTCel10">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel1">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel2">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel3">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel4">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel5">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel6">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel7">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel8">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel9">
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTTel10">
                 </Component>
               </SubComponents>
             </Container>
@@ -1013,7 +1190,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="614" max="32767" attributes="0"/>
+                      <EmptySpace pref="780" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1056,7 +1233,7 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="106" max="32767" attributes="0"/>
+                              <EmptySpace pref="316" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jTRua" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1193,6 +1370,115 @@
             <Component class="javax.swing.JTextField" name="jTEstado">
             </Component>
           </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="Funcion&#xe1;rios">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="Funcion&#xe1;rios"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="1049" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="716" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel17">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel18">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Inicio de Contrato"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.P.F"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel20">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefone"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Celular"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="Estoque">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="Estoque"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="1181" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="940" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="Transa&#xe7;&#xf5;es">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="Transa&#xe7;&#xf5;es"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="1181" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="940" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
         </Container>
       </SubComponents>
     </Container>

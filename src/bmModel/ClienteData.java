@@ -19,11 +19,14 @@ import javax.swing.JOptionPane;
  */
 public class ClienteData extends Pessoa {
 
-    Statement stmt = Acesso();
+    public ClienteData(Statement stmt) {
+        super(stmt);
+    }
 
-    public boolean SalvarPessoa(Database Data,int i) {
+    
+    public boolean SalvarPessoa(Pessoa Pessoa,int i) {
         try {
-            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Data.getNome().get(i) + "','" + Data.getTelefone().get(i) + "','" + Data.getCelular().get(i) + "','" + Data.getEmpresa().get(i) + "','" + Data.getCidade().get(i) + "','" + Data.getEstado().get(i) + "','" + Data.getCEP().get(i) + "','" + Data.getRua().get(i) + "','" + Data.getComplemento().get(i) + "','" + Data.getEmail().get(i) + "');";
+            String Insert = "INSERT INTO Clientes(Nome, Telefone, Celular, Empresa, Cidade, Estado, CEP, Rua, Complemento, Email) Values('" + Pessoa.getNome().get(i) + "','" + Pessoa.getTelefone().get(i) + "','" + Pessoa.getCelular().get(i) + "','" + Pessoa.getEmpresa().get(i) + "','" + Pessoa.getCidade().get(i) + "','" + Pessoa.getEstado().get(i) + "','" + Pessoa.getCEP().get(i) + "','" + Pessoa.getRua().get(i) + "','" + Pessoa.getComplemento().get(i) + "','" + Pessoa.getEmail().get(i) + "');";
             System.out.println(Insert);
             stmt.executeUpdate(Insert);
 
@@ -36,53 +39,53 @@ public class ClienteData extends Pessoa {
         return false;
     }
 
-    public boolean BuscarData(Database Data) {
-        if (!Data.getNome().isEmpty()) {
-            Data.getID().clear();
-            Data.getNome().clear();
-            Data.getTelefone().clear();
-            Data.getCelular().clear();
-            Data.getEmpresa().clear();
-            Data.getCidade().clear();
-            Data.getEstado().clear();
-            Data.getCEP().clear();
-            Data.getRua().clear();
-            Data.getComplemento().clear();
-            Data.getEmail().clear();
+    public boolean BuscarData(Pessoa Pessoa) {
+        if (!Pessoa.getNome().isEmpty()) {
+            Pessoa.getID().clear();
+            Pessoa.getNome().clear();
+            Pessoa.getTelefone().clear();
+            Pessoa.getCelular().clear();
+            Pessoa.getEmpresa().clear();
+            Pessoa.getCidade().clear();
+            Pessoa.getEstado().clear();
+            Pessoa.getCEP().clear();
+            Pessoa.getRua().clear();
+            Pessoa.getComplemento().clear();
+            Pessoa.getEmail().clear();
         }
 
         try {
             String Pesquisar = "SELECT * FROM Clientes;";
             ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM Clientes;");
             rs.next();
-            Data.setNum((rs.getInt(1)));
+            Pessoa.setNum((rs.getInt(1)));
 
             rs = stmt.executeQuery(Pesquisar);
 
             if (rs.next()) {
-                Data.getNome().add(rs.getString("Nome"));
-                Data.getTelefone().add(rs.getInt("Telefone"));
-                Data.getID().add(rs.getInt("ID"));
-                Data.getCelular().add(rs.getInt("Celular"));
-                Data.getEmpresa().add(rs.getString("Empresa"));
-                Data.getCidade().add(rs.getString("Cidade"));
-                Data.getEstado().add(rs.getString("Estado"));
-                Data.getCEP().add(rs.getInt("CEP"));
-                Data.getRua().add(rs.getString("Rua"));
-                Data.getComplemento().add(rs.getString("Complemento"));
-                Data.getEmail().add(rs.getString("Email"));
+                Pessoa.getNome().add(rs.getString("Nome"));
+                Pessoa.getTelefone().add(rs.getInt("Telefone"));
+                Pessoa.getID().add(rs.getInt("ID"));
+                Pessoa.getCelular().add(rs.getInt("Celular"));
+                Pessoa.getEmpresa().add(rs.getString("Empresa"));
+                Pessoa.getCidade().add(rs.getString("Cidade"));
+                Pessoa.getEstado().add(rs.getString("Estado"));
+                Pessoa.getCEP().add(rs.getInt("CEP"));
+                Pessoa.getRua().add(rs.getString("Rua"));
+                Pessoa.getComplemento().add(rs.getString("Complemento"));
+                Pessoa.getEmail().add(rs.getString("Email"));
                 while (rs.next()) {
-                    Data.getNome().add(rs.getString("Nome"));
-                    Data.getTelefone().add(rs.getInt("Telefone"));
-                    Data.getID().add(rs.getInt("ID"));
-                    Data.getCelular().add(rs.getInt("Celular"));
-                    Data.getEmpresa().add(rs.getString("Empresa"));
-                    Data.getCidade().add(rs.getString("Cidade"));
-                    Data.getEstado().add(rs.getString("Estado"));
-                    Data.getCEP().add(rs.getInt("CEP"));
-                    Data.getRua().add(rs.getString("Rua"));
-                    Data.getComplemento().add(rs.getString("Complemento"));
-                    Data.getEmail().add(rs.getString("Email"));
+                    Pessoa.getNome().add(rs.getString("Nome"));
+                    Pessoa.getTelefone().add(rs.getInt("Telefone"));
+                    Pessoa.getID().add(rs.getInt("ID"));
+                    Pessoa.getCelular().add(rs.getInt("Celular"));
+                    Pessoa.getEmpresa().add(rs.getString("Empresa"));
+                    Pessoa.getCidade().add(rs.getString("Cidade"));
+                    Pessoa.getEstado().add(rs.getString("Estado"));
+                    Pessoa.getCEP().add(rs.getInt("CEP"));
+                    Pessoa.getRua().add(rs.getString("Rua"));
+                    Pessoa.getComplemento().add(rs.getString("Complemento"));
+                    Pessoa.getEmail().add(rs.getString("Email"));
 
                 }
                 return true;
@@ -94,10 +97,10 @@ public class ClienteData extends Pessoa {
         }
     }
 
-    public int ProcurarPosicao(Database Data, int i) {
+    public int ProcurarPosicao(Pessoa Pessoa, int i) {
         int Pos;
         try {
-            String GetPosicao = "SELECT COUNT(*) FROM Clientes WHERE ID <= '" + Data.getID().get(i) + "'";
+            String GetPosicao = "SELECT COUNT(*) FROM Clientes WHERE ID <= '" + Pessoa.getID().get(i) + "'";
             ResultSet rs = stmt.executeQuery(GetPosicao);
             Pos = rs.getInt(1);
             return Pos;
@@ -107,9 +110,9 @@ public class ClienteData extends Pessoa {
         }
     }
 
-    public boolean Excluir(Database Data, int i) {
+    public boolean Excluir(Pessoa Pessoa, int i) {
         try {
-            String Excluir = "DELETE FROM Clientes WHERE ID='" + Data.getID().get(i) + "';";
+            String Excluir = "DELETE FROM Clientes WHERE ID='" + Pessoa.getID().get(i) + "';";
             stmt.execute(Excluir);
             return true;
 
