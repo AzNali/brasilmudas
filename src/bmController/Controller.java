@@ -71,6 +71,39 @@ public class Controller implements ActionListener {
                 ClientesController.Voltar();
                 break;
         
+            case "ComboBox1":
+                ClientesController.jComboBox1();
+                break;
+            case "ComboBox2":
+                ClientesController.jComboBox2();
+                break;
+            case "ComboBox3":
+                ClientesController.jComboBox3();
+                break;
+            case "ComboBox4":
+                ClientesController.jComboBox4();
+                break;
+            case "ComboBox5":
+                ClientesController.jComboBox5();
+                break;
+            case "ComboBox6":
+                ClientesController.jComboBox6();
+                break;
+            case "ComboBox7":
+                ClientesController.jComboBox7();
+                break;
+            case "ComboBox8":
+                ClientesController.jComboBox8();
+                break;
+            case "ComboBox9":
+                ClientesController.jComboBox9();
+                break;
+            case "ComboBox10":
+                
+                ClientesController.jComboBox10();
+                break;    
+                
+                
         //Botões Salvar Cliente 
             case "Salvar":
                 ClientesController.SalvarCliente();
